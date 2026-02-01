@@ -1,6 +1,6 @@
 package java_365;
 
-public class Largest_Number {
+public class Largest_Number1 {
 	public static void main(String[] args) {
 		int arr[]= {0,1,211,3,4,5,99,1022};
 		
