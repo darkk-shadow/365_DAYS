@@ -1,25 +1,33 @@
 package java_365;
 
-import java.util.*;
+import java.util.Scanner;
 
-public class Fiboncci {
-	static Scanner sc = new Scanner(System.in);
+class Abundant_Deficient {
 
-	public static void main(String[] args) {
-		System.out.print("Enter the range : ");
-		int range = sc.nextInt();
-		int a = 0;
-		int b = 1;
-		System.out.print("Fibonacci series : ");
+    static Scanner sc = new Scanner(System.in);
 
-		for (int i = 0; i <= range; i++) {
-			System.out.print(a + " ");
+    public static void main(String[] args) {
 
-			int c = a + b;
-			a = b;
-			b = c;
+        System.out.print("Enter a Number: ");
+        int num = sc.nextInt();
+        int sum = 0;
 
-		}
-	}
+        for (int i = 1; i <= num / 2; i++) {
+            if (num % i == 0) {
+                sum += i;   
+            }
+        }
 
+        if (sum == num) {
+            System.out.println(num + " is a Perfect Number");
+        }
+        else if (num > sum) {
+            System.out.println(num + " is a Deficient Number");
+            System.out.println("Deficient Value = " + (num - sum));
+        }
+        else {
+            System.out.println(num + " is an Abundant Number");
+            System.out.println("Abundant Value = " + (sum - num));
+        }
+    }
 }
